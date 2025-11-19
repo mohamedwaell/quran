@@ -22,13 +22,13 @@ const Loading = () => {
   }, []);
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full z-500 flex items-center justify-center bg-white  transition-opacity duration-700 ${
+      className={`fixed top-0 left-0 z-500 flex h-full w-full items-center justify-center bg-[var(--color-background)] transition-opacity duration-700 ${
         loading
           ? "opacity-100 pointer-events-auto z-50"
           : "opacity-0 pointer-events-none"
       } ${visible ? "" : "hidden"}`}
     >
-      <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-green-500 border-opacity-50" />
+      <div className="h-16 w-16 animate-spin rounded-full border-t-4 border-[var(--color-text)] border-opacity-70" />
     </div>
   );
 };

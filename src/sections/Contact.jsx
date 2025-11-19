@@ -39,55 +39,55 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-[#F0FBF6] py-16 sm:py-20">
+    <section id="contact" className="bg-[var(--color-background)] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#0A8A56]">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary">
             Contact
           </p>
-          <h2 className="text-3xl font-semibold text-[#0A2F1D] md:text-4xl">
+          <h2 className="text-3xl font-semibold text-primary md:text-4xl">
             {contactContent.title}
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-[#4F5B51]">
+          <p className="mx-auto max-w-2xl text-base text-muted">
             {contactContent.intro}
           </p>
         </div>
 
         <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[0.9fr,1.1fr]">
-          <div className="rounded-[24px] border border-[#0A8A56]/20 bg-white p-6 shadow-[0_18px_45px_rgba(10,138,86,0.12)] sm:rounded-[28px] sm:p-8">
+          <div className="rounded-[24px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)] sm:rounded-[28px] sm:p-8">
             <div className="space-y-6">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#0A8A56]">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
                   WhatsApp
                 </p>
                 <a
                   href={contactContent.whatsapp.href}
-                  className="mt-2 inline-flex items-center gap-2 text-2xl font-semibold text-[#0A8A56]"
+                  className="mt-2 inline-flex items-center gap-2 text-2xl font-semibold text-primary"
                 >
                   {contactContent.whatsapp.display}
                 </a>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#0A8A56]">
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
                   Email
                 </p>
                 <a
                   href={contactContent.email.href}
-                  className="mt-2 inline-flex items-center gap-2 text-xl font-semibold text-[#0A2F1D]"
+                  className="mt-2 inline-flex items-center gap-2 text-xl font-semibold text-primary"
                 >
                   {contactContent.email.display}
                 </a>
               </div>
-              <p className="rounded-2xl bg-[#F7F9F7] p-4 text-sm text-[#4F5B51]">
+              <p className="rounded-2xl bg-[var(--color-cream)] p-4 text-sm text-muted">
                 {contactContent.note}
               </p>
             </div>
           </div>
 
-          <div className="rounded-[24px] border border-white bg-white p-6 shadow-[0_18px_45px_rgba(26,26,26,0.08)] sm:rounded-[28px] sm:p-8">
+          <div className="rounded-[24px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)] sm:rounded-[28px] sm:p-8">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid gap-4 md:grid-cols-2">
-                <label className="text-sm font-medium text-[#0A2F1D]">
+                <label className="text-sm font-medium text-primary">
                   Parent Name
                   <input
                     type="text"
@@ -96,10 +96,10 @@ const Contact = () => {
                     value={formData.parentName}
                     onChange={handleChange}
                     required
-                    className="mt-2 w-full rounded-2xl border border-[#1A1A1A]/10 px-4 py-3 text-base text-[#1A1A1A] outline-none focus:border-[#0A8A56]"
+                    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
                   />
                 </label>
-                <label className="text-sm font-medium text-[#0A2F1D]">
+                <label className="text-sm font-medium text-primary">
                   Child's Name
                   <input
                     type="text"
@@ -108,32 +108,32 @@ const Contact = () => {
                     value={formData.childName}
                     onChange={handleChange}
                     required
-                    className="mt-2 w-full rounded-2xl border border-[#1A1A1A]/10 px-4 py-3 text-base text-[#1A1A1A] outline-none focus:border-[#0A8A56]"
+                    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
                   />
                 </label>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
-                <label className="text-sm font-medium text-[#0A2F1D]">
+                <label className="text-sm font-medium text-primary">
                   Program Interest
                   <select
                     name="programInterest"
                     value={formData.programInterest}
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-2xl border border-[#1A1A1A]/10 bg-white px-4 py-3 text-base text-[#1A1A1A] outline-none focus:border-[#0A8A56]"
+                    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
                   >
                     {contactFormOptions.programInterest.map((option) => (
                       <option key={option}>{option}</option>
                     ))}
                   </select>
                 </label>
-                <label className="text-sm font-medium text-[#0A2F1D]">
+                <label className="text-sm font-medium text-primary">
                   Preferred Class Type
                   <select
                     name="classType"
                     value={formData.classType}
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-2xl border border-[#1A1A1A]/10 bg-white px-4 py-3 text-base text-[#1A1A1A] outline-none focus:border-[#0A8A56]"
+                    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
                   >
                     {contactFormOptions.classTypes.map((type) => (
                       <option key={type}>{type}</option>
@@ -142,7 +142,7 @@ const Contact = () => {
                 </label>
               </div>
 
-              <label className="text-sm font-medium text-[#0A2F1D]">
+              <label className="text-sm font-medium text-primary">
                 Preferred Days
                 <input
                   type="text"
@@ -150,18 +150,18 @@ const Contact = () => {
                   placeholder={contactFormOptions.placeholders.preferredDays}
                   value={formData.preferredDays}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-2xl border border-[#1A1A1A]/10 px-4 py-3 text-base text-[#1A1A1A] outline-none focus:border-[#0A8A56]"
+                  className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
                 />
               </label>
 
-              <label className="text-sm font-medium text-[#0A2F1D]">
+              <label className="text-sm font-medium text-primary">
                 Message
                 <textarea
                   placeholder={contactFormOptions.placeholders.message}
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-2xl border border-[#1A1A1A]/10 px-4 py-3 text-base text-[#1A1A1A] outline-none focus:border-[#0A8A56]"
+                  className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
                   rows={4}
                 />
               </label>
@@ -169,19 +169,19 @@ const Contact = () => {
               <div className="flex flex-wrap gap-4">
                 <button
                   type="submit"
-                  className="rounded-2xl bg-[#0A8A56] px-6 py-3 font-semibold text-white shadow-lg shadow-[#0A8A56]/30"
+                  className="rounded-2xl bg-primary px-6 py-3 font-semibold text-white shadow-lg shadow-[var(--color-primary-shadow)]"
                 >
                   {contactFormOptions.actions[0].label}
                 </button>
                 <a
                   href={contactFormOptions.actions[1].href}
-                  className="rounded-2xl border border-[#0A8A56]/30 px-6 py-3 font-semibold text-[#0A8A56]"
+                  className="rounded-2xl border border-[var(--color-primary)]/30 px-6 py-3 font-semibold text-primary"
                 >
                   {contactFormOptions.actions[1].label}
                 </a>
               </div>
               {status && (
-                <p className="text-sm font-semibold text-[#0A8A56]">{status}</p>
+                <p className="text-sm font-semibold text-primary">{status}</p>
               )}
             </form>
           </div>

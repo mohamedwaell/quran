@@ -2,12 +2,20 @@
 
 @layer base {
   :root {
-    --color-primary: #0a8a56;
-    --color-gold: #d4a44a;
-    --color-white: #ffffff;
-    --color-text: #1a1a1a;
-    --color-muted: #4f5b51;
-    --color-bg: #f7f9f7;
+    --color-background: #0a3925; /* deep green */
+    --color-text: #d7a83f; /* gold */
+    --color-text-muted: #f4e3bd;
+    --color-surface: rgba(255, 255, 255, 0.05);
+    --color-surface-strong: rgba(255, 255, 255, 0.12);
+    --color-border: rgba(215, 168, 63, 0.35);
+    --color-shadow: rgba(0, 0, 0, 0.45);
+    --color-button-bg: #d7a83f;
+    --color-button-text: #0a3925;
+    /* legacy aliases */
+    --color-primary: var(--color-text);
+    --color-primary-soft: var(--color-border);
+    --color-primary-shadow: var(--color-shadow);
+    --color-gold: var(--color-text);
   }
 
   * {
@@ -17,7 +25,7 @@
   body {
     margin: 0;
     font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-    background-color: var(--color-bg);
+    background-color: var(--color-background);
     color: var(--color-text);
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -27,6 +35,37 @@
     background: rgba(10, 138, 86, 0.2);
     color: var(--color-text);
   }
+}
+
+.text-primary {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-surface-strong {
+  background-color: var(--color-surface-strong);
+}
+
+.border-gold {
+  border-color: var(--color-border);
+}
+
+.btn-primary {
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  box-shadow: 0 15px 30px var(--color-shadow);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
 }
 @keyframes float {
     0% {

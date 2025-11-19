@@ -36,29 +36,29 @@ const Navbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-[#1A1A1A]/10 bg-white/90 backdrop-blur">
+    <nav className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-background)] backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:gap-6 sm:px-6">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src={ "/logo.webp"}
+            src={siteMeta.logo || "/logo.webp"}
             alt="Al-Kareem Academy"
-            className="h-12 w-12 rounded-2xl border border-[#0A8A56]/20 bg-white object-contain p-1 shadow-lg shadow-[#0A8A56]/20"
+            className="h-12 w-12 rounded-2xl border border-[var(--color-primary-soft)] bg-white object-contain p-1 shadow-lg shadow-[var(--color-primary-shadow)]"
           />
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#0A8A56]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
               {siteMeta?.title?.split(" — ")[0] || "Al-Kareem Academy"}
             </p>
-            <p className="text-sm text-[#4F5B51]">{siteMeta.tagline}</p>
+            <p className="text-sm text-muted">{siteMeta.tagline}</p>
           </div>
         </Link>
 
-        <div className="hidden items-center gap-6 text-sm font-semibold text-[#1A1A1A] md:flex">
+        <div className="hidden items-center gap-6 text-sm font-semibold text-[var(--color-text)] md:flex">
           {navItems.map(({ label, href }) => (
             <Link
               key={label}
               to={href}
-              className={`transition-colors hover:text-[#0A8A56] ${
-                location.pathname === href ? "text-[#0A8A56]" : ""
+              className={`transition-colors hover:text-primary ${
+                location.pathname === href ? "text-primary" : ""
               }`}
             >
               {label}
@@ -66,7 +66,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="rounded-full bg-[#0A8A56] px-5 py-2 text-white shadow-lg shadow-[#0A8A56]/30"
+            className="rounded-full bg-primary px-5 py-2 text-white shadow-lg shadow-[var(--color-primary-shadow)]"
           >
             Contact Us
           </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
           aria-controls="mobile-menu"
-          className="text-2xl text-[#0A8A56] md:hidden"
+          className="text-2xl text-primary md:hidden"
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
           ☰
@@ -88,13 +88,13 @@ const Navbar = () => {
         <div
           ref={menuRef}
           id="mobile-menu"
-          className="flex flex-col gap-4 border-t border-[#1A1A1A]/10 bg-white/95 px-4 py-4 text-sm font-semibold text-[#1A1A1A] md:hidden"
+          className="flex flex-col gap-4 border-t border-[var(--color-border)] bg-[var(--color-background)] px-4 py-4 text-sm font-semibold text-[var(--color-text)] md:hidden"
         >
           {navItems.map(({ label, href }) => (
             <Link
               key={`${label}-mobile`}
               to={href}
-              className="rounded-xl px-3 py-2 hover:bg-[#0A8A56]/10"
+              className="rounded-xl px-3 py-2 hover:bg-[var(--color-primary)]/10"
               onClick={() => setIsMenuOpen(false)}
             >
               {label}
@@ -102,7 +102,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="rounded-full bg-[#0A8A56] px-4 py-2 text-center text-white shadow-md shadow-[#0A8A56]/30"
+            className="rounded-full bg-[ #d7a83f] px-4 py-2 text-center text-white shadow-md shadow-[var(--color-primary-shadow)]"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us

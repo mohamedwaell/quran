@@ -15,7 +15,7 @@ function App() {
     <>
     <Loading />
     <ScrollToTop />
-    <div className="bg-[#F7F9F7] text-[#1A1A1A]">
+    <div className="">
       <Navbar />
       <main className="px-4 py-6 sm:px-6 lg:px-0">
         <Routes>

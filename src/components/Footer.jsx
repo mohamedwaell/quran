@@ -3,13 +3,13 @@ import { contactContent } from "../const/const";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-[#1A1A1A]/10 bg-white/80">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-6 text-sm text-[#4F5B51] sm:px-6 lg:px-0">
+    <footer className="border-t border-[var(--color-border)] bg-[var(--color-background)]">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-6 text-sm text-muted sm:px-6 lg:px-0">
         <div className="flex flex-wrap items-center gap-2 text-center sm:text-left">
           <span>WhatsApp:</span>
           <a
             href={contactContent.whatsapp.href}
-            className="font-semibold text-[#0A8A56]"
+            className="font-semibold text-primary"
             target="_blank"
             rel="noreferrer"
           >
@@ -19,13 +19,15 @@ const Footer = () => {
           <span>Email:</span>
           <a
             href={contactContent.email.href}
-            className="font-semibold text-[#0A8A56]"
+            className="font-semibold text-primary"
           >
             {contactContent.email.display}
           </a>
         </div>
-        <div className="text-center">{contactContent.footerBlurb}</div>
-        <div className="text-center text-xs">{contactContent.copyright}</div>
+        <div className="text-center text-primary">{contactContent.footerBlurb}</div>
+        <div className="text-center text-xs text-muted">
+          {contactContent.copyright}
+        </div>
       </div>
     </footer>
   );

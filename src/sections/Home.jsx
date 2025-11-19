@@ -10,23 +10,18 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-[#F0FBF6] via-white to-[#FDF7E8] py-16 sm:py-20"
+      className="relative overflow-hidden bg-[var(--color-background)]  py-16 sm:py-20"
     >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 right-10 h-64 w-64 rounded-full bg-[#0A8A56]/10 blur-[120px]" />
-        <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-[#D4A44A]/20 blur-[150px]" />
+        <div className="absolute -top-32 right-10 h-64 w-64 rounded-full bg-[var(--color-primary-soft)] blur-[120px]" />
+        <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-[var(--color-gold-soft)] blur-[150px]" />
       </div>
 
-      <div className="relative mx-auto flex max-w-6xl flex-col-reverse gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-0">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-0">
         <div className="w-full lg:w-1/2">
           <div
-            className="relative overflow-hidden rounded-[30px] border border-[#0A8A56]/20 bg-white p-6 shadow-[0_30px_70px_rgba(10,138,86,0.12)] sm:rounded-[40px]"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 20%, rgba(10,138,86,0.08), transparent 45%), radial-gradient(circle at 80% 0%, rgba(212,164,74,0.15), transparent 60%)",
-            }}
+            className="relative overflow-hidden rounded-[30px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_30px_70px_var(--color-primary-shadow)] sm:rounded-[40px]"
           >
-            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/asfalt-light.png')" }} />
             <img
               src={heroContent.heroImage || "/hero.png"}
               alt="Students learning"
@@ -37,15 +32,15 @@ const Home = () => {
         </div>
 
         <div className="w-full space-y-8 lg:w-1/2">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#0A8A56] shadow-md shadow-[#0A8A56]/10">
-            <span className="h-2 w-2 rounded-full bg-[#D4A44A]" />
+          <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-background)] px-4 py-2 text-sm font-semibold text-primary shadow-md shadow-[var(--color-primary-shadow)]">
+            <span className="h-2 w-2 rounded-full bg-[var(--color-gold)]" />
             {siteMeta.heroBadge}
           </span>
-          <div className="space-y-4 text-[#0A2F1D]">
-            <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
+          <div className="space-y-4 text-primary">
+            <h1 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl">
               {heroContent.headline}
             </h1>
-            <p className="text-base text-[#4F5B51] sm:text-lg">
+            <p className="text-base text-muted sm:text-lg">
               {heroContent.subheading}
             </p>
           </div>
@@ -53,13 +48,13 @@ const Home = () => {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             <Link
               to={heroContent.primaryCta.href}
-              className="inline-flex min-w-[150px] flex-1 items-center justify-center rounded-2xl bg-[#0A8A56] px-6 py-3 font-semibold text-white shadow-lg shadow-[#0A8A56]/30"
+              className="inline-flex min-w-[150px] flex-1 items-center justify-center rounded-2xl bg-primary px-6 py-3 font-semibold text-white shadow-lg shadow-[var(--color-primary-shadow)]"
             >
               {heroContent.primaryCta.label}
             </Link>
             <Link
               to={heroContent.secondaryCta.href}
-              className="inline-flex min-w-[150px] flex-1 items-center justify-center rounded-2xl border border-[#0A8A56]/30 px-6 py-3 font-semibold text-[#0A8A56] hover:border-[#0A8A56]"
+              className="inline-flex min-w-[150px] flex-1 items-center justify-center rounded-2xl border border-[var(--color-primary)]/30 px-6 py-3 font-semibold text-primary hover:border-[var(--color-primary)]"
             >
               {heroContent.secondaryCta.label}
             </Link>
@@ -102,7 +97,7 @@ const Home = () => {
         {sectionEntrances.map((section, index) => (
           <section
             key={section.id}
-            className={`flex min-h-[60vh] flex-col items-center gap-10 rounded-[36px] border border-[#0A8A56]/15 bg-white/95 p-6 text-[#0A2F1D] shadow-[0_30px_70px_rgba(10,138,86,0.12)] transition sm:p-10 ${section.reverse ? "md:flex-row-reverse" : "md:flex-row"}`}
+            className={`flex min-h-[60vh] flex-col items-center gap-10 rounded-[36px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 text-primary shadow-[0_30px_70px_var(--color-primary-shadow)] transition sm:p-10 ${section.reverse ? "md:flex-row-reverse" : "md:flex-row"}`}
           >
             <div className="w-full p-4 md:w-1/2">
               <img
@@ -113,7 +108,7 @@ const Home = () => {
               />
             </div>
             <div className="flex w-full flex-col items-center gap-4 p-4 text-center md:w-1/2 md:items-start md:text-left">
-              <div className="flex gap-3 text-3xl text-[#0A8A56]">
+              <div className="flex gap-3 text-3xl text-primary">
                 <span>{section.icon || "✨"}</span>
                 <span>🕌</span>
                 <span>🌙</span>
@@ -121,12 +116,12 @@ const Home = () => {
               <h3 className="text-3xl font-semibold md:text-4xl">
                 {section.title}
               </h3>
-              <p className="text-base text-[#4F5B51] md:text-lg">
+              <p className="text-base text-muted md:text-lg">
                 {section.description}
               </p>
               <Link
                 to={section.path}
-                className="mt-4 inline-flex items-center justify-center rounded-full border border-[#0A8A56]/30 px-8 py-3 font-semibold text-[#0A8A56] shadow-lg shadow-[#0A8A56]/10 transition hover:scale-105 hover:border-[#0A8A56]"
+                className="mt-4 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-8 py-3 font-semibold text-primary shadow-lg shadow-[var(--color-primary-shadow)]/2 transition hover:scale-105 hover:border-[var(--color-primary)]"
               >
                 Discover More
               </Link>

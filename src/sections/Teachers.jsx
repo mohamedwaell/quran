@@ -3,16 +3,16 @@ import { teachers } from "../const/const";
 
 const Teachers = () => {
   return (
-    <section id="teachers" className="py-16 sm:py-20">
+    <section id="teachers" className="bg-[var(--color-background)] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#0A8A56]">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary">
             Teachers
           </p>
-          <h2 className="text-3xl font-semibold text-[#0A2F1D] md:text-4xl">
+          <h2 className="text-3xl font-semibold text-primary md:text-4xl">
             Meet Our Instructors
           </h2>
-          <p className="mx-auto max-w-3xl text-base text-[#4F5B51]">
+          <p className="mx-auto max-w-3xl text-base text-muted">
             Certified Qur’an teachers with ijazah, international experience, and a heart for nurturing
             young learners.
           </p>
@@ -22,29 +22,29 @@ const Teachers = () => {
           {teachers.map((teacher) => (
             <article
               key={teacher.name}
-              className="rounded-[28px] border border-[#0A8A56]/10 bg-white p-6 shadow-[0_18px_45px_rgba(26,26,26,0.08)]"
+              className="rounded-[28px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)]"
             >
               <div className="flex flex-wrap items-center gap-4">
                 <img
                   src={teacher.photo || "/hero.png"}
                   alt={teacher.name}
-                  className="h-20 w-20 rounded-3xl border border-[#0A8A56]/10 object-cover"
+                  className="h-20 w-20 rounded-3xl border border-[var(--color-primary-soft)] object-cover"
                   loading="lazy"
                 />
                 <div>
-                  <h3 className="text-2xl font-semibold text-[#0A2F1D]">
+                  <h3 className="text-2xl font-semibold text-primary">
                     {teacher.name}
                   </h3>
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#0A8A56]">
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
                     {teacher.role}
                   </p>
                 </div>
               </div>
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#1A1A1A]/10 px-4 py-1 text-sm text-[#4F5B51]">
-                <span className="h-2 w-2 rounded-full bg-[#D4A44A]" />
+              <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[var(--color-gold-soft)] px-4 py-1 text-sm text-muted">
+                <span className="h-2 w-2 rounded-full bg-[var(--color-gold)]" />
                 {teacher.location}
               </div>
-              <p className="mt-4 text-[#1A1A1A]">{teacher.bio}</p>
+              <p className="mt-4 text-[var(--color-text)]">{teacher.bio}</p>
             </article>
           ))}
         </div>
