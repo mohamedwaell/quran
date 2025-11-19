@@ -66,7 +66,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="rounded-full bg-primary px-5 py-2 text-white shadow-lg shadow-[var(--color-primary-shadow)]"
+            className="rounded-full bg-[#d7a83f] px-5 py-2 text-white shadow-lg shadow-[var(--color-primary-shadow)]"
           >
             Contact Us
           </Link>
@@ -102,7 +102,7 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="rounded-full bg-[ #d7a83f] px-4 py-2 text-center text-white shadow-md shadow-[var(--color-primary-shadow)]"
+            className="rounded-full bg-[#d7a83f] px-4 py-2 text-center text-white shadow-md shadow-[var(--color-primary-shadow)]"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us
