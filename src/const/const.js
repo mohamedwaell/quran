@@ -103,7 +103,7 @@ export const teachers = [
     name: "Ustadha Mariam Abdul Maksoud",
     role: "Qur’an Specialist— Kids Program",
     location: "Cairo, Egypt",
-    photo: "/hero.png",
+    photo: "/hero.webp",
     bio: "Certified Noor Al-Bayan Instructor, Professional Diploma in Qur'an teaching (PDQT), Ijaza of Al Masjid An-Nabawi, encouraging instructor who builds confidence and consistency in young learners through Nooraniyah, Tajweed basics, short surah memorization, and foundational Islamic Studies.",
   },
 ];
