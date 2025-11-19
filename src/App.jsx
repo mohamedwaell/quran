@@ -8,8 +8,13 @@ import Teachers from "./sections/Teachers";
 import Contact from "./sections/Contact";
 import NotFound from "./sections/NotFound";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Loading from "./components/Loading";
+import ScrollToTop  from "./components/ScrollToTop";
 function App() {
   return (
+    <>
+    <Loading />
+    <ScrollToTop />
     <div className="bg-[#F7F9F7] text-[#1A1A1A]">
       <Navbar />
       <main className="px-4 py-6 sm:px-6 lg:px-0">
@@ -25,6 +30,7 @@ function App() {
       <WhatsAppButton />
       <Footer />
     </div>
+    </>
   );
 }
 
