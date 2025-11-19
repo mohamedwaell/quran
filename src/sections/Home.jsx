@@ -12,10 +12,7 @@ const Home = () => {
       id="home"
       className="relative overflow-hidden bg-[var(--color-background)]  py-16 sm:py-20"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 right-10 h-64 w-64 rounded-full bg-[var(--color-primary-soft)] blur-[120px]" />
-        <div className="absolute left-10 top-20 h-72 w-72 rounded-full bg-[var(--color-gold-soft)] blur-[150px]" />
-      </div>
+      
 
       <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-0">
         <div className="w-full lg:w-1/2">
@@ -48,7 +45,7 @@ const Home = () => {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             <Link
               to={heroContent.primaryCta.href}
-              className="inline-flex min-w-[150px] flex-1 items-center justify-center rounded-2xl bg-primary px-6 py-3 font-semibold text-white shadow-lg shadow-[var(--color-primary-shadow)]"
+              className="inline-flex min-w-[150px] flex-1 items-center justify-center rounded-2xl bg-[#d7a83f] px-6 py-3 font-semibold text-white shadow-lg shadow-[var(--color-primary-shadow)]"
             >
               {heroContent.primaryCta.label}
             </Link>
