@@ -131,6 +131,15 @@ export const sectionEntrances = [
     reverse: false,
   },
   {
+    id: "tuition",
+    title: "Tuition & Pricing",
+    description: "View our affordable pricing plans and flexible payment options.",
+    path: "/tuition",
+    image: "/plans.webp",
+    icon: "💰",
+    reverse: true,
+  },
+  {
     id: "teachers",
     title: "Meet the Teachers",
     description:
@@ -138,7 +147,7 @@ export const sectionEntrances = [
     path: "/teachers",
     image: "/teachers.webp",
     icon: "👩‍🏫",
-    reverse: true,
+    reverse: false,
   },
   {
     id: "contact",
@@ -147,7 +156,7 @@ export const sectionEntrances = [
     path: "/contact",
     image: "/contact.webp",
     icon: "✉️",
-    reverse: false,
+    reverse: true,
   },
 ];
 
