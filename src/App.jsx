@@ -6,6 +6,7 @@ import About from "./sections/About";
 import Programs from "./sections/ProgramsSection";
 import Teachers from "./sections/Teachers";
 import Contact from "./sections/Contact";
+import Tuition from "./sections/Tuition";
 import NotFound from "./sections/NotFound";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Loading from "./components/Loading";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/teachers" element={<Teachers />} />
+          <Route path="/tuition" element={<Tuition />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

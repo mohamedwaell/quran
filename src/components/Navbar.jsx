@@ -42,7 +42,7 @@ const Navbar = () => {
           <img
             src={siteMeta.logo || "/logo.webp"}
             alt="Al-Kareem Academy"
-            className="h-12 w-12 rounded-2xl border border-[var(--color-primary-soft)] bg-white object-contain p-1 shadow-lg shadow-[var(--color-primary-shadow)]"
+            className="h-24 w-24 object-contain "
           />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">

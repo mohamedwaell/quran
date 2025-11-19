@@ -29,7 +29,7 @@ const Home = () => {
         </div>
 
         <div className="w-full space-y-8 lg:w-1/2">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-background)] px-4 py-2 text-sm font-semibold text-primary shadow-md shadow-[var(--color-primary-shadow)]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-background)] px-4 py-2 text-xl font-semibold text-primary shadow-md shadow-[var(--color-primary-shadow)]">
             <span className="h-2 w-2 rounded-full bg-[var(--color-gold)]" />
             {siteMeta.heroBadge}
           </span>

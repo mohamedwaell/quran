@@ -1,10 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   programs,
   islamicStudiesTopics,
   scheduleSummary,
-  tuitionOptions,
-  tuitionNotes,
 } from "../const/const";
 
 const ProgramsSection = () => {
@@ -48,7 +47,7 @@ const ProgramsSection = () => {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr,0.9fr]">
+        <div className="mt-12">
           <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)]">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-gold)]">
               Islamic Studies
@@ -71,49 +70,39 @@ const ProgramsSection = () => {
               ))}
             </div>
           </div>
-
-          <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-              Tuition Plans
-            </p>
-            <div className="mt-4 grid gap-3">
-              {tuitionOptions.map(({ classType, rate, details }) => (
-                <div
-                  key={classType}
-                  className="rounded-2xl border border-[var(--color-primary-soft)] bg-[var(--color-cream)] p-4"
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-                    {classType}
-                  </p>
-                  <div className="mt-2 flex items-center justify-between">
-                    <p className="text-2xl font-semibold text-primary">
-                      {rate}
-                    </p>
-                    <span className="text-sm text-muted">{details}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 rounded-2xl bg-[var(--color-cream)] p-4 text-sm text-muted">
-              {tuitionNotes}
-            </p>
-          </div>
         </div>
 
-        <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 text-center shadow-[0_20px_45px_var(--color-primary-shadow)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            Parent Snapshot
-          </p>
-          <p className="mt-3 text-muted">
-            Weekly progress briefs, optional in-person check-ins (DMV area), and
-            1:1 reviews keep every family connected to the learning journey.
-          </p>
-          <a
-            href="/contact"
-            className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-6 py-3 text-sm font-semibold text-primary hover:border-[var(--color-primary)]"
-          >
-            Schedule a consultation ↗
-          </a>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 text-center shadow-[0_20px_45px_var(--color-primary-shadow)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+              Tuition & Pricing
+            </p>
+            <p className="mt-3 text-muted">
+              View our affordable pricing plans and flexible payment options.
+            </p>
+            <Link
+              to="/tuition"
+              className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-6 py-3 text-sm font-semibold text-primary hover:border-[var(--color-primary)]"
+            >
+              View Tuition Plans →
+            </Link>
+          </div>
+
+          <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 text-center shadow-[0_20px_45px_var(--color-primary-shadow)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+              Parent Snapshot
+            </p>
+            <p className="mt-3 text-muted">
+              Weekly progress briefs, optional in-person check-ins (DMV area), and
+              1:1 reviews keep every family connected to the learning journey.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-6 py-3 text-sm font-semibold text-primary hover:border-[var(--color-primary)]"
+            >
+              Schedule a consultation ↗
+            </Link>
+          </div>
         </div>
       </div>
     </section>

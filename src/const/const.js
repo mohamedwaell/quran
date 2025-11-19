@@ -9,9 +9,11 @@ export const siteMeta = {
 
 export const navItems = [
   { label: "Home", href: "/" },
-  { label: "Programs", href: "/programs" },
-  { label: "Teachers", href: "/teachers" },
   { label: "About Us", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Plans", href: "/tuition" },
+  { label: "Teachers", href: "/teachers" },
+  
   
 ];
 
@@ -21,7 +23,7 @@ export const heroContent = {
   subheading:
     "Trusted online Quran learning for children with certified and experienced teachers.",
   heroImage: "/hero.webp",
-  primaryCta: { label: "Contact Us", href: "/contact" },
+  primaryCta: { label: "ENROLL NOW", href: "/contact" },
   secondaryCta: { label: "View Programs", href: "/programs" },
   whyParentsChooseUs: [
     "Certified Quran teachers (Ijazah & formal training)",
