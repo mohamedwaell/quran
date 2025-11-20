@@ -8,11 +8,11 @@ export const siteMeta = {
 };
 
 export const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Programs", href: "/programs" },
-  { label: "Plans", href: "/tuition" },
-  { label: "Teachers", href: "/teachers" },
+  { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
+  { label: "Programs", href: "#programs" },
+  { label: "Plans", href: "#tuition" },
+  { label: "Teachers", href: "#teachers" },
   
   
 ];
@@ -22,7 +22,7 @@ export const heroContent = {
     "Virtual & In-Person Quran and Islamic Studies learning for Kids in the USA",
   subheading:
     "Trusted online Quran learning for children with certified and experienced teachers.",
-  heroImage: "/hero.webp",
+  heroImage: "/logo.webp",
   primaryCta: { label: "ENROLL NOW", href: "/contact" },
   secondaryCta: { label: "View Programs", href: "/programs" },
   whyParentsChooseUs: [

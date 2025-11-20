@@ -61,16 +61,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-[var(--color-background)] py-8 sm:py-10">
+    <section id="contact" className="bg-[var(--color-background-light)] py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-button-text)]">
             Contact
           </p>
-          <h2 className="text-3xl font-semibold text-primary md:text-4xl">
+          <h2 className="text-3xl font-semibold text-[var(--color-button-text)] md:text-4xl">
             {contactContent.title}
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-muted">
+          <p className="mx-auto max-w-2xl text-base text-[var(--color-green-light)]">
             {contactContent.intro}
           </p>
         </div>

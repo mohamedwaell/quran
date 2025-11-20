@@ -2,15 +2,17 @@
 
 @layer base {
   :root {
-    --color-background: #0a3925; /* deep green */
-    --color-text: #d7a83f; /* gold */
-    --color-text-muted: #f4e3bd;
+    --color-background: #072c1c;
+    --color-green-light: #054128;
+    --color-background-light: #fcf8f0;
+    --color-text: #f6d889;
+    --color-text-muted: #d9c28a;
     --color-surface: rgba(255, 255, 255, 0.05);
     --color-surface-strong: rgba(255, 255, 255, 0.12);
-    --color-border: rgba(215, 168, 63, 0.35);
-    --color-shadow: rgba(0, 0, 0, 0.45);
-    --color-button-bg: #d7a83f;
-    --color-button-text: #0a3925;
+    --color-border: rgba(246, 216, 137, 0.4);
+    --color-shadow: rgba(0, 0, 0, 0.5);
+    --color-button-bg: #d8a63b;
+    --color-button-text: #072b1a;
     /* legacy aliases */
     --color-primary: var(--color-text);
     --color-primary-soft: var(--color-border);
@@ -32,8 +34,8 @@
   }
 
   ::selection {
-    background: rgba(10, 138, 86, 0.2);
-    color: var(--color-text);
+    background: rgba(246, 216, 137, 0.35);
+    color: var(--color-background);
   }
 }
 

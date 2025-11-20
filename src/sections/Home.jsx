@@ -5,19 +5,23 @@ import {
   siteMeta,
   sectionEntrances,
 } from "../const/const";
-
+import About from "./About";
+import Programs from "./ProgramsSection";
+import Teachers from "./Teachers";
+import Contact from "./Contact";
+import Tuition from "./Tuition";
 const Home = () => {
   return (
     <section
-      id="home"
-      className="relative overflow-hidden bg-[var(--color-background)]  py-6 sm:py-10"
+      id="homeSection"
+      className="relative overflow-hidden bg-[var(--color-background)]  "
     >
-      
+      <div id="home">
 
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-0">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-0 py-16 ">
         <div className="w-full lg:w-1/2">
           <div
-            className="relative overflow-hidden rounded-[30px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_30px_70px_var(--color-primary-shadow)] sm:rounded-[40px]"
+            className="relative overflow-hidden rounded-[30px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_30px_70px_var(--color-primary-shadow)] sm:rounded-[40px]"
           >
             <img
               src={heroContent.heroImage || "/hero.png"}
@@ -90,7 +94,7 @@ const Home = () => {
           </div> */}
         </div>
       </div>
-      <div className="mx-auto mt-12 max-w-6xl space-y-12 px-4 sm:px-6 lg:px-0">
+      {/* <div className="mx-auto mt-12 max-w-6xl space-y-12 px-4 sm:px-6 lg:px-0">
         {sectionEntrances.map((section, index) => (
           <section
             key={section.id}
@@ -125,7 +129,14 @@ const Home = () => {
             </div>
           </section>
         ))}
+      </div> */}
       </div>
+      <About />
+      <Programs />
+      <Teachers />
+      <Tuition />
+      <Contact />
+     
     </section>
   );
 };

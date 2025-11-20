@@ -3,16 +3,16 @@ import { teachers } from "../const/const";
 
 const Teachers = () => {
   return (
-    <section id="teachers" className="bg-[var(--color-background)]py-8 sm:py-10">
+    <section id="teachers" className="bg-[var(--color-background-light)] py-8 sm:py-10">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-primary">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-button-text)]">
             Teachers
           </p>
-          <h2 className="text-3xl font-semibold text-primary md:text-4xl">
+          <h2 className="text-3xl font-semibold text-[var(--color-button-text)] md:text-4xl">
             Meet Our Instructors
           </h2>
-          <p className="mx-auto max-w-3xl text-base text-muted">
+          <p className="mx-auto max-w-3xl text-base text-[var(--color-green-light)]">
             Certified Qur’an teachers with ijazah, international experience, and a heart for nurturing
             young learners.
           </p>
