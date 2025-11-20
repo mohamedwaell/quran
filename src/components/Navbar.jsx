@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-background)] backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4  sm:gap-6 sm:px-6">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3 ">
           <img
             src={siteMeta.logo || "/logo.webp"}
             alt="Al-Kareem Academy"

@@ -57,11 +57,11 @@ const ProgramsSection = () => {
               Weekly lessons in Aqeedah, Seerah, daily duas, and prophetic
               manners to anchor every learner spiritually.
             </p>
-            <div className="mt-6 grid gap-3 md:grid-cols-2">
+            <div className="mt-6  gap-3 ">
               {islamicStudiesTopics.map((topic) => (
                 <div
                   key={topic}
-                  className="rounded-2xl border border-[var(--color-button-text)] bg-[var(--color-cream)] p-4 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
+                  className="rounded-2xl  bg-[var(--color-cream)] p-4 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
                 >
                   <IoCheckboxOutline className="text-2xl text-primary" /> {topic}
                 </div>

@@ -28,7 +28,7 @@ const Teachers = () => {
                 <img
                   src={teacher.photo || "/hero.png"}
                   alt={teacher.name}
-                  className="h-20 w-20 rounded-3xl border border-[var(--color-primary-soft)] object-cover"
+                  className="h-27 w-22   border border-[var(--color-primary-soft)] object-cover"
                   loading="lazy"
                 />
                 <div>
