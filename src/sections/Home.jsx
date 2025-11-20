@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[var(--color-background)]  py-16 sm:py-20"
+      className="relative overflow-hidden bg-[var(--color-background)]  py-6 sm:py-10"
     >
       
 
