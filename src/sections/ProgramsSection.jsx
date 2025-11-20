@@ -10,7 +10,7 @@ const ProgramsSection = () => {
   return (
     <section
       id="programs"
-      className="bg-[var(--color-background)] py-16 sm:py-20 text-primary"
+      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
