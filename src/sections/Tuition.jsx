@@ -43,12 +43,12 @@ const Tuition = () => {
         <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)] sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-button-text)]">
             Additional Information
-          </p>
-          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><IoCheckboxOutline className="text-2xl text-primary" />No registration fee</p>
-          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><IoCheckboxOutline className="text-2xl text-primary" />10% sibling discount</p>
-          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><IoCheckboxOutline className="text-2xl text-primary" />free 15-min assessment</p>
-          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><IoCheckboxOutline className="text-2xl text-primary" />Flexible class times (morning, evening, weekends)</p>
-          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><IoCheckboxOutline className="text-2xl text-primary" />Prices are per student</p>
+            </p>
+            <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><img src="/check.webp" className="w-10 h-7" />No registration fee</p>
+          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><img src="/check.webp" className="w-10 h-7" />10% sibling discount</p>
+          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><img src="/check.webp" className="w-10 h-7" />free 15-min assessment</p>
+          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><img src="/check.webp" className="w-10 h-7" />Flexible class times (morning, evening, weekends)</p>
+          <p className="mt-4 text-base text-[var(--color-green-light)] flex items-center gap-2"><img src="/check.webp" className="w-10 h-7" />Prices are per student</p>
         </div>
 
         <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)] sm:p-8">

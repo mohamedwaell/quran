@@ -63,7 +63,7 @@ const ProgramsSection = () => {
                   key={topic}
                   className="rounded-2xl  bg-[var(--color-cream)] p-4 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
                 >
-                  <IoCheckboxOutline className="text-2xl text-primary" /> {topic}
+                  <img src="/check.webp" className="w-10 h-7" /> {topic}
                 </div>
               ))}
             </div>
