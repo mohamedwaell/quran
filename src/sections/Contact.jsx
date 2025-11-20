@@ -7,6 +7,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     parentName: "",
     childName: "",
+    gender: "", // new
+    age: "",    // new
     programInterest: [],
     classType: contactFormOptions.classTypes[0],
     preferredDays: "",
@@ -51,6 +53,8 @@ const Contact = () => {
       [
         `Parent Name: ${formData.parentName}`,
         `Child Name: ${formData.childName}`,
+        `Gender: ${formData.gender}`,   // new
+        `Age: ${formData.age}`,         // new
         `Program Interest: ${programInterests}`,
         `Class Type: ${formData.classType}`,
         `Preferred Days: ${formData.preferredDays}`,
@@ -78,6 +82,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-[0.9fr,1.1fr]">
+          {/* Contact Info */}
           <div className="rounded-[24px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)] sm:rounded-[28px] sm:p-8">
             <div className="space-y-6">
               <div>
@@ -108,6 +113,7 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Contact Form */}
           <div className="rounded-[24px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)] sm:rounded-[28px] sm:p-8">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid gap-4 md:grid-cols-2">
@@ -137,6 +143,39 @@ const Contact = () => {
                 </label>
               </div>
 
+              {/* Gender and Age */}
+              <div className="grid gap-4 md:grid-cols-2">
+                <label className="text-sm font-medium text-primary">
+                  Gender
+                  <select
+                    name="gender"
+                    value={formData.gender}
+                    onChange={handleChange}
+                    required
+                    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-background)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
+                  >
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                   
+                  </select>
+                </label>
+                <label className="text-sm font-medium text-primary">
+                  Age
+                  <input
+                    type="number"
+                    name="age"
+                    min="1"
+                    placeholder="Child's age"
+                    value={formData.age}
+                    onChange={handleChange}
+                    required
+                    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
+                  />
+                </label>
+              </div>
+
+              {/* Program Interest */}
               <div>
                 <label className="text-sm font-medium text-primary">
                   Program Interest
@@ -161,6 +200,7 @@ const Contact = () => {
                 </label>
               </div>
 
+              {/* Class Type */}
               <div>
                 <label className="text-sm font-medium text-primary">
                   Preferred Class Type
@@ -177,6 +217,7 @@ const Contact = () => {
                 </label>
               </div>
 
+              {/* Preferred Days */}
               <label className="text-sm font-medium text-primary">
                 Preferred Days
                 <input
@@ -189,6 +230,7 @@ const Contact = () => {
                 />
               </label>
 
+              {/* Message */}
               <label className="text-sm font-medium text-primary">
                 Message
                 <textarea
@@ -201,6 +243,7 @@ const Contact = () => {
                 />
               </label>
 
+              {/* Actions */}
               <div className="flex flex-wrap gap-4">
                 <button
                   type="submit"
