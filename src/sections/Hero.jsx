@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   heroContent,
   siteMeta,
@@ -14,17 +15,20 @@ const Hero = () => {
         <div
           className="relative overflow-hidden rounded-[30px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_30px_70px_var(--color-primary-shadow)] sm:rounded-[40px]"
         >
-          <img
+          <motion.img
             src={heroContent.heroImage || "/hero.png"}
             alt="Students learning"
-            className="relative mx-auto h-[260px] w-full max-w-[320px] object-contain sm:h-[360px] sm:max-w-[420px] lg:h-[420px] lg:max-w-[460px]"
+            className="relative mx-auto h-[260px] w-full max-w-[320px] object-contain sm:h-[360px] sm:max-w-[420px] lg:h-[420px] lg:max-w-[460px] "
             loading="lazy"
+            initial={{ opacity: 0, y: 70 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 1 }}
           />
         </div>
       </div>
 
       <div className="w-full space-y-8 lg:w-1/2">
-        <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-background)] px-4 py-2 text-xl font-semibold text-primary shadow-md shadow-[var(--color-primary-shadow)]">
+        <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-background)] px-4 py-2 text-xl font-semibold text-primary shadow-lg shadow-orange-300">
           <span className="h-2 w-2 rounded-full bg-[var(--color-gold)]" />
           {siteMeta.heroBadge}
         </span>

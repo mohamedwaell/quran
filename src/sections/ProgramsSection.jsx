@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IoCheckboxOutline } from "react-icons/io5";
+
 import {
   programs,
   islamicStudiesTopics,
@@ -47,11 +49,9 @@ const ProgramsSection = () => {
 
         <div className="mt-12">
           <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-button-text)]">
-              Islamic Studies
-            </p>
+            
             <h3 className="mt-2 text-2xl font-semibold text-[var(--color-button-text)]">
-              Faith & Character Curriculum
+            Islamic Studies
             </h3>
             <p className="mt-2 text-[var(--color-green-light)]">
               Weekly lessons in Aqeedah, Seerah, daily duas, and prophetic
@@ -61,9 +61,9 @@ const ProgramsSection = () => {
               {islamicStudiesTopics.map((topic) => (
                 <div
                   key={topic}
-                  className="rounded-2xl border border-[var(--color-button-text)] bg-[var(--color-cream)] p-4 text-sm font-semibold text-[var(--color-button-text)]"
+                  className="rounded-2xl border border-[var(--color-button-text)] bg-[var(--color-cream)] p-4 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
                 >
-                  {topic}
+                  <IoCheckboxOutline className="text-2xl text-primary" /> {topic}
                 </div>
               ))}
             </div>

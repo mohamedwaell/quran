@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { contactContent, contactFormOptions } from "../const/const";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -79,8 +81,8 @@ const Contact = () => {
           <div className="rounded-[24px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)] sm:rounded-[28px] sm:p-8">
             <div className="space-y-6">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
-                  WhatsApp
+                <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+                  <FaPhoneSquareAlt className="text-2xl text-primary" /> WhatsApp
                 </p>
                 <a
                   href={contactContent.whatsapp.href}
@@ -90,8 +92,8 @@ const Contact = () => {
                 </a>
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
-                  Email
+                <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-primary">
+                  <MdOutlineMailOutline className="text-2xl text-primary" /> Email
                 </p>
                 <a
                   href={contactContent.email.href}

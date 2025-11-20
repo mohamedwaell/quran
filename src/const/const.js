@@ -210,7 +210,7 @@ export const contactContent = {
     display: "info@alkareemacademy.com",
     href: "mailto:info@alkareemacademy.com",
   },
-  note: "Virtual classes available nationwide • In-person (DMV area) by request • Response time: within 24 hours (Mon–Fri)",
+  note: "Virtual classes available nationwide • In-person (DMV area) by request • Response time: within 24 hours (7 days)",
   footerBlurb:
     "Al-Kareem Academy — Virtual Quran and Islamic Studies for Kids in the USA",
   copyright: "© Al-Kareem Academy All rights reserved.",
