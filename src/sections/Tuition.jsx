@@ -6,7 +6,7 @@ const Tuition = () => {
   return (
     <section
       id="tuition"
-      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary"
+      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary px-4  sm:px-6 lg:px-0"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">

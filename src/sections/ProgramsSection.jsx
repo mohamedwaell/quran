@@ -10,7 +10,7 @@ const ProgramsSection = () => {
   return (
     <section
       id="programs"
-      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary"
+      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary px-4  sm:px-6 lg:px-0"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
@@ -27,19 +27,22 @@ const ProgramsSection = () => {
         </div>
 
         <div className="mt-10 grid gap-6 sm:mt-12 md:grid-cols-2">
+          {" "}
           {programs.map((program) => (
             <div
               key={program.title}
               className="rounded-[28px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_40px_var(--color-primary-shadow)]"
             >
+              {" "}
+              <h3 className="mt-4 text-2xl text-[var(--color-button-text)] font-semibold">
+                {program.title}
+              </h3>{" "}
+              <p className="mt-3 text-[var(--color-green-light)]">
+                {program.description}
+              </p>{" "}
               
-              <h3 className="mt-4 text-2xl text-[var(--color-button-text)] font-semibold">{program.title}</h3>
-              <p className="mt-3 text-[var(--color-green-light)]">{program.description}</p>
-              <button className="mt-6 inline-flex items-center gap-2 rounded-full border border-[var(--color-button-text)]/30 px-5 py-2 text-sm font-semibold text-[var(--color-button-text)] transition hover:border-[var(--color-primary)]">
-                View outline →
-              </button>
             </div>
-          ))}
+          ))}{" "}
         </div>
 
         <div className="mt-12">
@@ -105,4 +108,3 @@ const ProgramsSection = () => {
 };
 
 export default ProgramsSection;
-

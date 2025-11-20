@@ -45,31 +45,31 @@ const Navbar = () => {
             className="h-24 w-24 object-contain "
           />
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+            <p className="text-xl font-semibold uppercase tracking-[0.3em] text-primary">
               {siteMeta?.title?.split(" — ")[0] || "Al-Kareem Academy"}
             </p>
-            <p className="text-sm text-muted">{siteMeta.tagline}</p>
+            <p className="text-sl text-muted">{siteMeta.tagline}</p>
           </div>
         </Link>
 
         <div className="hidden items-center gap-6 text-lg font-semibold text-[var(--color-text)] md:flex">
           {navItems.map(({ label, href }) => (
-            <Link
+            <a
               key={label}
-              to={href}
+              href={href}
               className={`transition-colors hover:text-primary ${
-                location.pathname === href ? "text-primary" : ""
+                location.pathname === href ? "text-[var(--color-text-muted)]" : ""
               }`}
             >
               {label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="#contact"
+          <a
+            href="#contact"
             className="rounded-full bg-[#d7a83f] px-5 py-2 text-white shadow-lg shadow-[var(--color-primary-shadow)]"
           >
             Contact Us
-          </Link>
+          </a>
         </div>
 
         <button
@@ -91,22 +91,22 @@ const Navbar = () => {
           className="flex flex-col gap-4 border-t border-[var(--color-border)] bg-[var(--color-background)] px-4 py-4 text-sm font-semibold text-[var(--color-text)] md:hidden"
         >
           {navItems.map(({ label, href }) => (
-            <Link
+            <a
               key={`${label}-mobile`}
-              to={href}
+              href={href}
               className="rounded-xl px-3 py-2 hover:bg-[var(--color-primary)]/10"
               onClick={() => setIsMenuOpen(false)}
             >
               {label}
-            </Link>
+            </a>
           ))}
-          <Link
-            to="/contact"
+          <a
+            href="#contact"
             className="rounded-full bg-[#d7a83f] px-4 py-2 text-center text-white shadow-md shadow-[var(--color-primary-shadow)]"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us
-          </Link>
+          </a>
         </div>
       )}
     </nav>

@@ -1,3 +1,7 @@
+import { FaBookQuran } from "react-icons/fa6";
+import { GiBookmarklet } from "react-icons/gi";
+import { RiBookOpenFill, RiMoonClearFill } from "react-icons/ri";
+
 export const siteMeta = {
   title: "Al-Kareem Academy — Virtual Quran & Islamic Studies for Kids",
   description:
@@ -8,11 +12,12 @@ export const siteMeta = {
 };
 
 export const navItems = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "#" },
   { label: "About Us", href: "#about" },
   { label: "Programs", href: "#programs" },
-  { label: "Plans", href: "#tuition" },
+ 
   { label: "Teachers", href: "#teachers" },
+  { label: "Plans & Tuition", href: "#tuition" },
   
   
 ];
@@ -23,8 +28,8 @@ export const heroContent = {
   subheading:
     "Trusted online Quran learning for children with certified and experienced teachers.",
   heroImage: "/logo.webp",
-  primaryCta: { label: "ENROLL NOW", href: "/contact" },
-  secondaryCta: { label: "View Programs", href: "/programs" },
+  primaryCta: { label: "ENROLL NOW", href: "#contact" },
+  secondaryCta: { label: "View Programs", href: "#programs" },
   whyParentsChooseUs: [
     "Certified Quran teachers (Ijazah & formal training)",
     "Affordable packages & siblings discounts",
@@ -61,30 +66,32 @@ export const aboutContent = {
     "Progress updates for parents",
   ],
 };
-
 export const programs = [
   {
+    icon: FaBookQuran,
     title: "Nooraniyah (Beginner Reading)",
     description:
       "Teaches Arabic letter recognition and correct pronunciation using the Nooraniyah method to build a strong foundation for Quran reading.",
   },
   {
+    icon: RiBookOpenFill,
     title: "Quran Reading",
     description:
       "Improves reading fluency and confidence with correct articulation and consistent practice on short surahs and passages.",
   },
   {
+    icon: GiBookmarklet,
     title: "Tajweed & Recitation",
     description:
       "Covers core Tajweed rules with application in guided recitation. Emphasis on clarity, accuracy, and rhythm.",
   },
   {
+    icon: RiMoonClearFill,
     title: "Quran Memorization (Hifz)",
     description:
       "Personalized memorization plans with weekly goals, daily revision, and review to ensure strong retention and step-by-step progress.",
   },
 ];
-
 export const islamicStudiesTopics = [
   "Aqeedah (Islamic beliefs)",
   "Seerah (Prophetic biography)",

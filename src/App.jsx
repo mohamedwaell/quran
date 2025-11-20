@@ -14,14 +14,9 @@ function App() {
     <ScrollToTop />
     <div className="">
       <Navbar />
-      <main className="px-4 py-6 sm:px-6 lg:px-0">
+      <main className=" py-6   relative overflow-hidden bg-[var(--color-background)]">
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/teachers" element={<Teachers />} />
-          <Route path="/tuition" element={<Tuition />} />
-          <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
