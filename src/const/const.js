@@ -176,16 +176,16 @@ export const tuitionOptions = [
   {
     classType: "Virtual Group (2–5 students)",
     rate: "$30 / session",
-    details: "Small group • Interactive learning",
+    details: "40 minutes • Small group • Interactive learning",
   },
   {
     classType: "Virtual Group (6–10 students)",
     rate: "$20 - 25 / session",
-    details: "Larger group • Structured progress",
+    details: "40 minutes • Larger group • Structured progress",
   },
   {
     classType: "In-Person (DMV area)",
-    rate: "$50 / 45 min session",
+    rate: "$50 / 60 min session",
     details: "Private at-home sessions (travel fee may apply)",
   },
 ];
