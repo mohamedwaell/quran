@@ -50,7 +50,7 @@ const Navbar = () => {
             className="h-24 w-24 object-contain "
           />
           <div>
-            <p className="text-sl md:text-center font-semibold font-[Montserrat] uppercase tracking-[0.3em] text-primary">
+            <p className="text-sl md:text-center font-semibold  uppercase tracking-[0.3em] text-primary">
               {siteMeta?.title?.split(" — ")[0] || "Al-Kareem Academy"}
             </p>
             <p className="text-sl text-muted">{siteMeta.tagline}</p>
