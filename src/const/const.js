@@ -207,8 +207,8 @@ export const contactContent = {
   },
   email: {
     label: "Email",
-    display: "alkareemacademyusa@gmail.com",
-    href: "mailto:alkareemacademyusa@gmail.com",
+    display: "info@alkareemacademy.com",
+    href: "mailto:info@alkareemacademy.com",
   },
   note: "Virtual classes available nationwide • In-person (DMV area) by request • Response time: within 24 hours (7 days)",
   footerBlurb:
@@ -238,7 +238,7 @@ export const contactFormOptions = {
   },
   actions: [
     { label: "Send Message", type: "primary" },
-    { label: "Email Us", href: "mailto:alkareemacademyusa@gmail.com" },
+    { label: "Email Us", href: "mailto:info@alkareemacademy.com" },
   ],
 };
 
