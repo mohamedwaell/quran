@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
   try {
     await transporter.sendMail({
-      from: `"Enrollment Form" <${process.env.BREVO_USER}>`,
+      from: `"Enrollment Form" <${process.env.FROM_EMAIL}>`,
       to: process.env.TO_EMAIL,
       subject: `New Enrollment Inquiry from ${parentName}`,
       text: `
