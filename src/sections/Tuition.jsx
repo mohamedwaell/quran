@@ -7,7 +7,7 @@ const Tuition = () => {
   return (
     <section
       id="tuition"
-      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary px-4  sm:px-6 lg:px-0"
+      className="bg-[var(--color-background)] py-8 sm:py-10 text-primary px-4  sm:px-6 lg:px-0 scroll-mt-24"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
@@ -40,7 +40,7 @@ const Tuition = () => {
           ))}
         </div>
 
-        <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)] sm:p-8 scroll-mt-24">
+        <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)] sm:p-8 ">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-button-text)]">
             Additional Information
             </p>
