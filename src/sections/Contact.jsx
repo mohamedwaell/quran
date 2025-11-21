@@ -7,13 +7,15 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     parentName: "",
     childName: "",
-    gender: "", // new
-    age: "",    // new
+    email: "",              // NEW
+    gender: "",
+    age: "",
     programInterest: [],
     classType: contactFormOptions.classTypes[0],
     preferredDays: "",
     message: "",
   });
+  
 
   const [status, setStatus] = useState("");
 
@@ -40,31 +42,43 @@ const Contact = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    if (formData.programInterest.length === 0) {
-      setStatus("Please select at least one program interest.");
-      return;
-    }
-    const programInterests = formData.programInterest.join(", ");
-    const subject = encodeURIComponent(
-      `Enrollment Inquiry – ${programInterests}`
-    );
-    const body = encodeURIComponent(
-      [
-        `Parent Name: ${formData.parentName}`,
-        `Child Name: ${formData.childName}`,
-        `Gender: ${formData.gender}`,   // new
-        `Age: ${formData.age}`,         // new
-        `Program Interest: ${programInterests}`,
-        `Class Type: ${formData.classType}`,
-        `Preferred Days: ${formData.preferredDays}`,
-        `Message:`,
-        formData.message,
-      ].join("\n")
-    );
-    window.location.href = `mailto:${contactContent.email.display}?subject=${subject}&body=${body}`;
-    setStatus("Opening your email client with the message…");
-  };
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      setStatus("Sending...");
+    
+      if (formData.programInterest.length === 0) {
+        setStatus("Please select at least one program interest.");
+        return;
+      }
+    
+      try {
+        const res = await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+    
+        if (res.ok) {
+          setStatus("Your message has been sent successfully!");
+          setFormData({
+            parentName: "",
+            childName: "",
+            email: "",
+            gender: "",
+            age: "",
+            programInterest: [],
+            classType: contactFormOptions.classTypes[0],
+            preferredDays: "",
+            message: "",
+          });
+        } else {
+          setStatus("Error sending your message. Please try again.");
+        }
+      } catch (err) {
+        setStatus("Something went wrong!");
+      }
+    };
+  };    
 
   return (
     <section id="contact" className="bg-[var(--color-background-light)] py-8 sm:py-10 px-4  sm:px-6 lg:px-0">
@@ -142,7 +156,21 @@ const Contact = () => {
                   />
                 </label>
               </div>
+              <div>
+              <label className="text-sm font-medium text-primary">
+  Email
+  <input
+    type="email"
+    name="email"
+    placeholder="Your email"
+    value={formData.email}
+    onChange={handleChange}
+    required
+    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
+  />
+</label>
 
+              </div>
               {/* Gender and Age */}
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="text-sm font-medium text-primary">
