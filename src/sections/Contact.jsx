@@ -41,7 +41,6 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (event) => {
     const handleSubmit = async (event) => {
       event.preventDefault();
       setStatus("Sending...");
@@ -78,7 +77,7 @@ const Contact = () => {
         setStatus("Something went wrong!");
       }
     };
-  };    
+  
 
   return (
     <section id="contact" className="bg-[var(--color-background-light)] py-8 sm:py-10 px-4  sm:px-6 lg:px-0">
