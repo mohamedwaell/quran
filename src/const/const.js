@@ -226,8 +226,8 @@ export const contactFormOptions = {
   ],
   classTypes: [
     "One-on-One virtual",
-    "Group Class (2–5)",
-    "Group Class (6–10)",
+    "Group Class (2–5)  virtual",
+    "Group Class (6–10)  virtual",
     "In-Person (DMV area)",
   ],
   placeholders: {
