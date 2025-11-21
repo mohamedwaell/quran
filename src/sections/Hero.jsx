@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; // 👈 Import useState and useEffect
 import { Link } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'; // 👈 Import the hook
 import { motion } from "framer-motion";
 import {
   heroContent,
@@ -7,32 +8,11 @@ import {
   sectionEntrances,
 } from "../const/const";
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false); 
-
-  // 2. Use useEffect to check the window size after the component mounts
-  useEffect(() => {
-    // Function to check the screen width
-    const checkScreenSize = () => {
-      // Check if window object exists (prevents SSR errors)
-      if (typeof window !== 'undefined') {
-        // Set isMobile to true if screen width is 768px or less
-        setIsMobile(window.innerWidth <= 768);
-      }
-    };
-
-    // Run check immediately on mount
-    checkScreenSize();
-
-    // Add event listener to re-run check on window resize
-    window.addEventListener('resize', checkScreenSize);
-
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', checkScreenSize);
-    };
-  }, []); // Empty dependency array ensures this runs once on mount
-
-  // 3. Define the conditional animation based on the dynamic state
+  const isMobile = useMediaQuery({ maxWidth: 768 }); 
+  
+  // No need for useEffect, useState, or window checks!
+  
+ 
   const initialAnimation = isMobile 
     ? { opacity: 0, y: 70 }   // Mobile: Fade up from bottom
     : { opacity: 0, x: -70 }; // PC: Fade in from left
