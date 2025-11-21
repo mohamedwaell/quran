@@ -9,6 +9,7 @@ export default async function handler(req, res) {
     parentName,
     childName,
     email,
+    phone, // ADDED
     gender,
     age,
     programInterest,
@@ -36,6 +37,7 @@ export default async function handler(req, res) {
 Parent Name: ${parentName}
 Child Name: ${childName}
 Email: ${email}
+Phone: ${phone} // ADDED
 Gender: ${gender}
 Age: ${age}
 Program Interests: ${programInterest.join(", ")}

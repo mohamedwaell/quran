@@ -7,7 +7,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     parentName: "",
     childName: "",
-    email: "",              // NEW
+    email: "",   
+    phone: "", // ADDED           // NEW
     gender: "",
     age: "",
     programInterest: [],
@@ -63,6 +64,7 @@ const Contact = () => {
             parentName: "",
             childName: "",
             email: "",
+            phone: "", // ADDED
             gender: "",
             age: "",
             programInterest: [],
@@ -168,7 +170,18 @@ const Contact = () => {
     className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
   />
 </label>
-
+<label className="text-sm font-medium text-primary">
+  Phone
+  <input
+    type="tel" // Use type="tel" for phone numbers
+    name="phone"
+    placeholder="Your phone number"
+    value={formData.phone}
+    onChange={handleChange}
+    required
+    className="mt-2 w-full rounded-2xl border border-[var(--color-border)] px-4 py-3 text-base text-[var(--color-text)] outline-none focus:border-[var(--color-primary)]"
+  />
+</label>
               </div>
               {/* Gender and Age */}
               <div className="grid gap-4 md:grid-cols-2">
