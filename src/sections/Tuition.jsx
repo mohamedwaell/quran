@@ -40,7 +40,7 @@ const Tuition = () => {
           ))}
         </div>
 
-        <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)] sm:p-8">
+        <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_20px_45px_var(--color-primary-shadow)] sm:p-8 scroll-mt-24">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-button-text)]">
             Additional Information
             </p>

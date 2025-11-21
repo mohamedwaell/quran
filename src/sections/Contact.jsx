@@ -82,7 +82,7 @@ const Contact = () => {
   
 
   return (
-    <section id="contact" className="bg-[var(--color-background-light)] py-8 sm:py-10 px-4  sm:px-6 lg:px-0">
+    <section id="contact" className="bg-[var(--color-background-light)] py-8 sm:py-10 px-4  sm:px-6 lg:px-0 scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
         <div className="space-y-3 text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--color-button-text)]">
