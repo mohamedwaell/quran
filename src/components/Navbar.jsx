@@ -43,19 +43,23 @@ const Navbar = () => {
       <div className="flex w-full  items-center justify-between gap-4 px-4 sm:gap-6 sm:px-6 ">
         <div>
         {/* Logo/Title Group (Pushed to the left edge of the centered max-w-6xl container) */}
-        <Link to="/" className="flex items-center gap-3 ">
+        <div  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-3 cursor-pointer ">
           <img
             src={siteMeta.logo || "/logo.webp"}
             alt="Al-Kareem Academy"
             className="h-24 w-24 object-contain "
           />
           <div>
-            <p className="text-sl md:text-center font-semibold  uppercase tracking-[0.3em] text-primary">
+        <a href="#"><p className="text-sl md:text-center font-semibold  uppercase tracking-[0.3em] text-primary">
               {siteMeta?.title?.split(" — ")[0] || "Al-Kareem Academy"}
-            </p>
-            <p className="text-sl text-muted">{siteMeta.tagline}</p>
+            </p></a>
+           <a href="#" className="text-sl text-muted">
+  {siteMeta.tagline}
+</a>
+
+            
           </div>
-        </Link>
+        </div>
 </div>
         {/* Navlinks/Button Group (Pushed to the right edge of the centered max-w-6xl container) 
             Removed the old 'ml-auto' class.
