@@ -24,11 +24,11 @@ const Teachers = () => {
               key={teacher.name}
               className="rounded-[28px] border border-[var(--color-primary-soft)] bg-[var(--color-background)] p-6 shadow-[0_18px_45px_var(--color-primary-shadow)]"
             >
-              <div className="flex flex-wrap items-center gap-4">
+              <div className=" items-center gap-4">
                 <img
                   src={teacher.photo || "/hero.png"}
                   alt={teacher.name}
-                  className="h-27 w-22   border border-[var(--color-primary-soft)] object-cover"
+                  className="h-27 w-22 mb-2  border border-[var(--color-primary-soft)] object-cover"
                   loading="lazy"
                 />
                 <div>

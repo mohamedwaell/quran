@@ -57,13 +57,13 @@ const ProgramsSection = () => {
               Weekly lessons in Aqeedah, Seerah, daily duas, and prophetic
               manners to anchor every learner spiritually.
             </p>
-            <div className="mt-6  gap-3 ">
+            <div className=" mt-4 gap-3 ">
               {islamicStudiesTopics.map((topic) => (
                 <div
                   key={topic}
-                  className="rounded-2xl  bg-[var(--color-cream)] p-4 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
+                  className="rounded-2xl  bg-[var(--color-cream)] px-4 py-2 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
                 >
-                  <img src="/check.webp" className="w-10 h-7" /> {topic}
+                  <img src="/check.webp" className="w-5 h-5" /> {topic}
                 </div>
               ))}
             </div>

@@ -106,7 +106,7 @@ export const teachers = [
     role: "Founder & Qur'an Program Director",
     location: "Maryland, USA",
     photo: "/me.jpg",
-    bio: "Certified Qur’an Teacher (Ministry of Islamic Affairs, Saudi Arabia). Former Resident Imam & Qur’an Teacher in Tabuk Mosque (Saudi Arabia). Former Qur’an Director & Head of Arabic & Islamic Studies at ICM Academy (Maryland, USA) and Guest Imam in Japan, Australia, Indonesia, Saudi Arabia, and across the USA. Known for a structured memorization system, strong Tajweed focus, and clear communication with parents.",
+    bio: " ljaza of AL-Azhar AL-Shareef - Egypt .  Certified Qur’an Teacher (Ministry of Islamic Affairs, Saudi Arabia). Former Resident Imam & Qur’an Teacher in Tabuk Mosque (Saudi Arabia). Former Qur’an Director & Head of Arabic & Islamic Studies at ICM Academy (Maryland, USA) and Guest Imam in Japan, Australia, Indonesia, Saudi Arabia, and across the USA. Known for a structured memorization system, strong Tajweed focus, and clear communication with parents.",
   },
   {
     name: "Ustadha Mariam Abdul Maksoud",
@@ -225,10 +225,10 @@ export const contactFormOptions = {
     "Islamic Studies",
   ],
   classTypes: [
-    "One-on-One",
+    "One-on-One virtual",
     "Group Class (2–5)",
     "Group Class (6–10)",
-    "In-Person (DMV)",
+    "In-Person (DMV area)",
   ],
   placeholders: {
     parentName: "Your full name",
