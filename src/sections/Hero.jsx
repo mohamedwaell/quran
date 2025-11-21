@@ -36,7 +36,7 @@ const Hero = () => {
   const initialAnimation = isMobile 
     ? { opacity: 0, y: 70 }   // Mobile: Fade up from bottom
     : { opacity: 0, x: -70 }; // PC: Fade in from left
-const fanimate = isMobile ? { opacity: 1, y: 0 }:{ opacity: 1, x: 0 };
+const fanimate = isMobile ? { opacity: 1, y: 0 ,x:0 }:{ opacity: 1,y:0, x: 0 };
   return (
     <section id="hero" className='px-4  sm:px-6 lg:px-0' >
 
