@@ -13,7 +13,7 @@ const Hero = () => {
     <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-start lg:px-0 py-16 ">
       <div className="w-full lg:w-1/2">
         <div
-          className="relative overflow-hidden rounded-[30px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 shadow-[0_30px_70px_var(--color-primary-shadow)] sm:rounded-[40px]"
+          className="relative overflow-hidden rounded-[30px] border border-[var(--color-primary-soft)] p-6 shadow-[0_30px_70px_var(--color-primary-shadow)] sm:rounded-[40px]"
         >
           <motion.img
             src={heroContent.heroImage || "/hero.png"}
