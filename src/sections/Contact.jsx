@@ -293,7 +293,7 @@ const Contact = () => {
                 </button>
                 <a
                   href={contactFormOptions.actions[1].href}
-                  className="rounded-2xl border border-[var(--color-primary)]/30 px-6 py-3 font-semibold text-primary"
+                  className="rounded-2xl border border-[var(--color-primary)]/30 px-6 py-3 font-semibold text-primary hover:border-[var(--color-primary)]"
                 >
                   {contactFormOptions.actions[1].label}
                 </a>
