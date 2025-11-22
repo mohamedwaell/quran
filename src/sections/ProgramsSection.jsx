@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { IoCheckboxOutline } from "react-icons/io5";
+
 
 import {
   programs,
   islamicStudiesTopics,
-  scheduleSummary,
+
 } from "../const/const";
 
 const ProgramsSection = () => {
@@ -70,38 +69,7 @@ const ProgramsSection = () => {
           </div>
         </div>
 
-        {/* <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 text-center shadow-[0_20px_45px_var(--color-primary-shadow)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-              Tuition & Pricing
-            </p>
-            <p className="mt-3 text-muted">
-              View our affordable pricing plans and flexible payment options.
-            </p>
-            <Link
-              to="/tuition"
-              className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-6 py-3 text-sm font-semibold text-primary hover:border-[var(--color-primary)]"
-            >
-              View Tuition Plans →
-            </Link>
-          </div>
-
-          <div className="rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 text-center shadow-[0_20px_45px_var(--color-primary-shadow)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-              Parent Snapshot
-            </p>
-            <p className="mt-3 text-muted">
-              Weekly progress briefs, optional in-person check-ins (DMV area), and
-              1:1 reviews keep every family connected to the learning journey.
-            </p>
-            <Link
-              to="/contact"
-              className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-6 py-3 text-sm font-semibold text-primary hover:border-[var(--color-primary)]"
-            >
-              Schedule a consultation ↗
-            </Link>
-          </div>
-        </div> */}
+        
       </div>
     </section>
   );

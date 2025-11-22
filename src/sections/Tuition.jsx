@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { tuitionOptions, tuitionNotes, scheduleSummary } from "../const/const";
-import { IoCheckboxOutline } from "react-icons/io5";
+
+import { tuitionOptions, scheduleSummary } from "../const/const";
+
 
 const Tuition = () => {
   return (
@@ -58,21 +58,7 @@ const Tuition = () => {
           <p className="mt-4 text-base text-[var(--color-green-light)]">{scheduleSummary}</p>
         </div>
 
-        {/* <div className="mt-10 rounded-[32px] border border-[var(--color-primary-soft)] bg-[var(--color-background-light)] p-6 text-center shadow-[0_20px_45px_var(--color-primary-shadow)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
-            Ready to Get Started?
-          </p>
-          <p className="mt-3 text-muted">
-            Contact us to discuss which plan works best for your child and to
-            schedule a free 15-minute assessment.
-          </p> */}
-          {/* <Link
-            to="/contact"
-            className="mt-6 inline-flex items-center justify-center rounded-full border border-[var(--color-primary)]/30 px-6 py-3 text-sm font-semibold text-primary hover:border-[var(--color-primary)]"
-          >
-            Contact Us for Enrollment ↗
-          </Link> */}
-        {/* </div> */}
+       
       </div>
     </section>
   );
