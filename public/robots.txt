@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alkareemacademy.com/sitemap.xml
-
+Sitemap: https://www.alkareemacademy.com/sitemap.xml
