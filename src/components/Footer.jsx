@@ -15,12 +15,14 @@ const Footer = () => {
           >
             {contactContent.whatsapp.display}
           </a>
+          
           <span className="hidden sm:inline">•</span>
-          <span>Email:</span>
+          
           <a
             href={contactContent.email.href}
-            className="font-semibold text-primary"
+            className="font-semibold flex  gap-2 text-primary"
           >
+            <span>Email:</span>
             {contactContent.email.display}
           </a>
         </div>
