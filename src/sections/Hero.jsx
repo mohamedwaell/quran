@@ -21,7 +21,7 @@ const Hero = () => {
               src={heroContent.heroImage || "/hero.png"}
               alt="Students learning"
               className="relative mx-auto h-[260px] w-full max-w-[320px] object-contain sm:h-[360px] sm:max-w-[420px] lg:h-[420px] lg:max-w-[460px] "
-              loading="lazy"
+             
               initial={initialAnimation}
               animate={fanimate}
               transition={{ duration: 1, ease: "easeOut", delay: 1 }}
