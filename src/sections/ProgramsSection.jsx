@@ -62,7 +62,7 @@ const ProgramsSection = () => {
                   key={topic}
                   className="rounded-2xl  bg-[var(--color-cream)] px-4 py-2 text-sm font-semibold text-[var(--color-button-text)] flex items-center gap-2"
                 >
-                  <img src="/check.webp" className="w-5 h-5" /> {topic}
+                  <img src="/check.webp" className="w-5 h-5" alt="checkbox" /> {topic}
                 </div>
               ))}
             </div>
